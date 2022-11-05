@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    height: 120vh;
+    width: 100vw;
+    background: linear-gradient(to top left,rgba(128, 0, 128, 0.633),rgb(255, 150, 150))
+}
+input{
+	display:block;
+    width: 10rem;
+    height: 3rem;
+    margin: auto;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(105, 88, 216);
+    font-weight: 700;
+    font-size: 16px;
+    transition: box-shadow 600ms ease-in-out,color 600ms ease-in-out;
+}
+
+input:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color:rgba(144, 127, 255, 0.803) ;
+    box-shadow: 0px 0px 54px 8px rgb(43, 31, 120) inset;
+}

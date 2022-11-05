@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+    
+    
+}
+
+
+.container{
+    background-color: #ffffff;
+    border: 1px solid rgba(128, 128, 128, 0.222);
+    width:22rem;
+    height:30rem;
+    margin:20px auto auto auto;
+}
+
+.logo{
+    width:175px;
+    height: 51px;
+    margin:45px auto;
+    /* margin: 40px 99px 30px 91px; */
+}
+
+#phone-email{
+    display: block;
+    margin:auto auto 8px auto;
+    width:80%;
+    background-color: #fafafa;
+    height:37px;
+    font-size: 12px;
+    padding:0px 3px 0px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.248);
+    border-radius: 3px;
+    font-family: 'Quicksand', sans-serif;
+}
+#password{
+    display:block;
+    font-size: 12px;
+    margin:8px auto auto auto;
+    width:80%;
+    height:37px;
+    padding:0px 3px 0px 10px;
+    background-color: #fafafa;
+    border: 1px solid rgba(128, 128, 128, 0.232);
+    border-radius: 3px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.loginbutton{
+    margin:15px auto;
+    height:28px;
+    background-color:#0095f6;
+    border-radius: 3px;
+    border: none;
+    width:80%;
+    color: white;
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    display:block;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+hr{
+    width:95px;
+    background-color: #74757729;
+    display:inline-block;
+    margin: 0px 30px 0px 30px;
+}
+
+.forgotten{
+    text-decoration: none;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    color: #520ab1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+}
+
+
+span{
+    color: gray;
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+}
+
+.signup{
+    margin-left: 83px;
+    margin-top: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+}
