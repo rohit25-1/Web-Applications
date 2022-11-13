@@ -22,12 +22,13 @@ body {
 .box {
   cursor: pointer;
   display: inline-block;
-  width: 17%;
+  width: 17rem;
   height: 13rem;
   border: none;
   margin-left: 35px;
   position: relative;
   top: 25%;
+  margin-bottom: 25px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
