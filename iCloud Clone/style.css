@@ -1,0 +1,91 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 300vh;
+  background-color: rgb(251, 251, 253);
+}
+
+.navitems {
+  display: inline;
+}
+
+nav {
+  padding: 7px 12px;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 252, 252, 0);
+  backdrop-filter: blur(20px);
+  z-index: 10;
+}
+
+.right {
+  float: right;
+  margin-right: 20px;
+}
+
+.dots {
+  width: 21px;
+  height: 18px;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.dots:hover {
+  background-color: rgba(206, 206, 206, 0.392);
+}
+
+.container {
+  width: 26rem;
+  position: relative;
+  top: 3rem;
+  margin: auto;
+}
+
+.videocontainer {
+  width: 300px;
+}
+
+.maintext {
+  text-align: center;
+  font-size: 8rem;
+  margin-top: 5px;
+  font-family: "Inter var", sans-serif;
+  font-weight: 700;
+}
+
+button {
+  width: 120px;
+  height: 41px;
+  border-radius: 20px;
+  margin: auto;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button {
+  width: min-content;
+  margin: 20px auto;
+}
+
+.bottomtext {
+  font-family: "Inter var", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 33px;
+  margin-top: 50px;
+}
