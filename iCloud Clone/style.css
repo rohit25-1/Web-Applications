@@ -13,8 +13,8 @@
 }
 
 body {
-  height: 300vh;
-  background-color: rgb(251, 251, 253);
+  background-color: rgba(252, 251, 255, 255);
+  min-height: 100vh;
 }
 
 .navitems {
@@ -74,6 +74,7 @@ button {
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
+  border: none;
   cursor: pointer;
 }
 
@@ -84,8 +85,116 @@ button {
 
 .bottomtext {
   font-family: "Inter var", sans-serif;
-  font-weight: 600;
+  font-weight: 450;
   text-align: center;
-  font-size: 33px;
+  font-size: 22px;
   margin-top: 50px;
+}
+
+.footercontainer {
+  margin: 200px auto;
+  width: 64rem;
+}
+
+.bottombox {
+  display: inline-block;
+  width: 30em;
+  height: 37em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin-top: 30px;
+  /* box-shadow: 25px 0px 50px 30px rgba(0, 0, 0, 0.13); */
+  box-shadow: 13px 20px 34px -1px rgb(0 0 0 / 26%);
+}
+
+.box2 {
+  float: right;
+}
+
+.imagefooter {
+  width: 400px;
+  margin: auto;
+}
+
+.img1 {
+  margin-top: 80px;
+}
+.img2 {
+  width: 350px;
+  margin-top: 40px;
+}
+
+.textfooter {
+  width: 80%;
+  margin: 4rem auto;
+  font-family: "Inter var", sans-serif;
+  text-align: left;
+}
+
+.toptext {
+  font-size: 25px;
+}
+
+.btmtext {
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 22px;
+}
+
+.vl {
+  display: inline;
+  border-left: 1px solid rgba(95, 95, 96, 0.572);
+  height: 500px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(245, 245, 247);
+  height: 4rem;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+  font-size: 11px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.end {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  top: 25px;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+  color: rgba(66, 66, 69, 0.572);
+}
+ul {
+  display: inline;
+}
+
+.endright {
+  display: inline;
+  float: right;
+  color: rgba(66, 66, 69, 0.548);
+}
+
+@media only screen and (max-width: 1040px) {
+  .footercontainer {
+    margin: 200px auto;
+    width: min-content;
+  }
+  footer {
+    display: none;
+  }
 }
