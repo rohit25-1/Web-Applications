@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://cdcd-171-76-86-185.ngrok.io/Sudoku/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <script src="./sudoku.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Sudoku_files/css2" rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(39, 39, 39);
+      font-family: "Ubuntu", sans-serif;
+    }
+    input {
+      background-color: rgb(39, 39, 39);
+      width: 59px;
+      height: 50px;
+      border: none;
+      font-size: large;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+    }
+    button {
+      width: 50px;
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+    }
+    td,
+    th {
+      background-color: rgb(39, 39, 39);
+    }
+    table {
+      width: 40%;
+      height: 40%;
+      border-collapse: collapse;
+      border: 2px solid rgb(255, 255, 255);
+      margin: auto;
+	  max-width:500px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    button {
+      width: 160px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: rgb(155, 129, 200);
+      border: none;
+      font-weight: bold;
+    }
+
+    button:hover {
+      box-shadow: 0px 0px 30px 3px rgb(113, 102, 162);
+      transform: scale(1.03);
+      transition: transform 400ms;
+      /* transition: transform 1300ms; */
+    }
+	
+	@media only screen and (max-width: 500px)
+	{
+		input{
+		    background-color: rgb(39, 39, 39);
+		width: 6.9vw;
+		height: 3vh;
+		border: none;
+		font-size: large;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+		}
+		table{
+		    width: 30vw;
+			height: 30vh;
+			border-collapse: collapse;
+			border: 2px solid rgb(255, 255, 255);
+			margin: auto;
+		}
+	}
+  </style></head>
+
+  
+  <body cz-shortcut-listen="true">
+    <h1>Sudoku Solver</h1>
+    <table border="1">
+      <tbody><tr>
+        <td><input type="text" name="" id="row1column1"></td>
+        <td><input type="text" name="" id="row1column2"></td>
+        <td><input type="text" name="" id="row1column3"></td>
+        <td><input type="text" name="" id="row1column4"></td>
+        <td><input type="text" name="" id="row1column5"></td>
+        <td><input type="text" name="" id="row1column6"></td>
+        <td><input type="text" name="" id="row1column7"></td>
+        <td><input type="text" name="" id="row1column8"></td>
+        <td><input type="text" name="" id="row1column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row2column1"></td>
+        <td><input type="text" name="" id="row2column2"></td>
+        <td><input type="text" name="" id="row2column3"></td>
+        <td><input type="text" name="" id="row2column4"></td>
+        <td><input type="text" name="" id="row2column5"></td>
+        <td><input type="text" name="" id="row2column6"></td>
+        <td><input type="text" name="" id="row2column7"></td>
+        <td><input type="text" name="" id="row2column8"></td>
+        <td><input type="text" name="" id="row2column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row3column1"></td>
+        <td><input type="text" name="" id="row3column2"></td>
+        <td><input type="text" name="" id="row3column3"></td>
+        <td><input type="text" name="" id="row3column4"></td>
+        <td><input type="text" name="" id="row3column5"></td>
+        <td><input type="text" name="" id="row3column6"></td>
+        <td><input type="text" name="" id="row3column7"></td>
+        <td><input type="text" name="" id="row3column8"></td>
+        <td><input type="text" name="" id="row3column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row4column1"></td>
+        <td><input type="text" name="" id="row4column2"></td>
+        <td><input type="text" name="" id="row4column3"></td>
+        <td><input type="text" name="" id="row4column4"></td>
+        <td><input type="text" name="" id="row4column5"></td>
+        <td><input type="text" name="" id="row4column6"></td>
+        <td><input type="text" name="" id="row4column7"></td>
+        <td><input type="text" name="" id="row4column8"></td>
+        <td><input type="text" name="" id="row4column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row5column1"></td>
+        <td><input type="text" name="" id="row5column2"></td>
+        <td><input type="text" name="" id="row5column3"></td>
+        <td><input type="text" name="" id="row5column4"></td>
+        <td><input type="text" name="" id="row5column5"></td>
+        <td><input type="text" name="" id="row5column6"></td>
+        <td><input type="text" name="" id="row5column7"></td>
+        <td><input type="text" name="" id="row5column8"></td>
+        <td><input type="text" name="" id="row5column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row6column1"></td>
+        <td><input type="text" name="" id="row6column2"></td>
+        <td><input type="text" name="" id="row6column3"></td>
+        <td><input type="text" name="" id="row6column4"></td>
+        <td><input type="text" name="" id="row6column5"></td>
+        <td><input type="text" name="" id="row6column6"></td>
+        <td><input type="text" name="" id="row6column7"></td>
+        <td><input type="text" name="" id="row6column8"></td>
+        <td><input type="text" name="" id="row6column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row7column1"></td>
+        <td><input type="text" name="" id="row7column2"></td>
+        <td><input type="text" name="" id="row7column3"></td>
+        <td><input type="text" name="" id="row7column4"></td>
+        <td><input type="text" name="" id="row7column5"></td>
+        <td><input type="text" name="" id="row7column6"></td>
+        <td><input type="text" name="" id="row7column7"></td>
+        <td><input type="text" name="" id="row7column8"></td>
+        <td><input type="text" name="" id="row7column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row8column1"></td>
+        <td><input type="text" name="" id="row8column2"></td>
+        <td><input type="text" name="" id="row8column3"></td>
+        <td><input type="text" name="" id="row8column4"></td>
+        <td><input type="text" name="" id="row8column5"></td>
+        <td><input type="text" name="" id="row8column6"></td>
+        <td><input type="text" name="" id="row8column7"></td>
+        <td><input type="text" name="" id="row8column8"></td>
+        <td><input type="text" name="" id="row8column9"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="" id="row9column1"></td>
+        <td><input type="text" name="" id="row9column2"></td>
+        <td><input type="text" name="" id="row9column3"></td>
+        <td><input type="text" name="" id="row9column4"></td>
+        <td><input type="text" name="" id="row9column5"></td>
+        <td><input type="text" name="" id="row9column6"></td>
+        <td><input type="text" name="" id="row9column7"></td>
+        <td><input type="text" name="" id="row9column8"></td>
+        <td><input type="text" name="" id="row9column9"></td>
+      </tr>
+    </tbody></table>
+    <button onclick="solver()">Solve</button>
+  
+
+</body></html>
