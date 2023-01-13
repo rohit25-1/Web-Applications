@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #222222;
+}
+
+.login-container {
+  width: 28rem;
+  height: 30rem;
+  margin: auto;
+  position: relative;
+  top: 12rem;
+  background-color: #222222;
+  box-shadow: 0px 0px 25px 10px rgb(48, 48, 48);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.headings {
+  margin-bottom: 30px;
+}
+
+.mainheading {
+  font-size: 2rem;
+}
+
+.subheading {
+  color: rgb(206, 206, 206);
+}
+
+.namebox {
+  margin-bottom: 5px;
+}
+
+input {
+  width: 90%;
+  height: 2.3rem;
+  margin-bottom: 10px;
+  padding: 9px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(230, 230, 230);
+}
+
+.inputbox {
+  margin-bottom: 20px;
+}
+
+.button {
+  text-align: center;
+  width: 90%;
+  height: 2.3rem;
+  background-color: rgb(65, 179, 235);
+  margin: 30px 0px 10px 0px;
+  border-radius: 4px;
+}
+
+.signin {
+  position: relative;
+  top: 15%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.loginfooter {
+  width: 90%;
+  font-size: 14px;
+}
+.forgotpassword {
+  float: right;
+}
+
+.inline {
+  display: inline;
+}
+
+.loginerror {
+  float: right;
+  margin-right: 39px;
+  font-size: small;
+  display: none;
+  color: rgb(194, 54, 54);
+  animation: blink 2.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,18 @@
+Exam Manager
+
+
+Student login, teacher login, create account.
+
+
+Student Login: pdf creator,photo merger.
+Upload it in place of assignment.
+Timer.
+Myprofile section to change name etc.
+Enter a code to enter into an exam where question paper will be uploaded/
+
+
+
+Teacher login: create pdf, merge pdf..
+Create a test with a countdown timer, create a code to start an exam.
+Access details of all students.
+Myprofile section to change details and a section to edit student details.	
