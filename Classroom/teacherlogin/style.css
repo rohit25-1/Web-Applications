@@ -61,6 +61,7 @@ input {
   width: 90%;
   height: 2.3rem;
   background-color: rgb(65, 179, 235);
+  background-color: rgb(117, 203, 246);
   margin: 30px 0px 10px 0px;
   border-radius: 4px;
 }
@@ -81,4 +82,29 @@ a {
 }
 .forgotpassword {
   float: right;
+}
+
+.disabledbutton {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 885px) {
+  .login-container {
+    position: relative;
+    top: 85px;
+    width: 22rem;
+    height: 28rem;
+  }
+  .mainheading {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login-container {
+    position: relative;
+    top: 85px;
+    width: 20rem;
+    height: 27rem;
+  }
 }

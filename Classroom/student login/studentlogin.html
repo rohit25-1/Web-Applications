@@ -14,11 +14,34 @@
         let usn = document.getElementById("usn").value;
         let changeStyle = document.querySelector(".loginerror");
         let pattern = /1BM\d\d[A-Z][A-Z]\d\d\d/g;
-        if (!pattern.test(usn)) {
+        if (!pattern.test(usn) && usn.length != 0) {
             changeStyle.style.display = 'inline';
         }
-        else{
+        else {
             changeStyle.style.display = 'none';
+        }
+    }
+
+    function hide() {
+        let changeStyle = document.querySelector(".loginerror");
+        changeStyle.style.display = 'none';
+    }
+
+    function check() {
+        let password = document.querySelector("#password").value;
+        let disButton = document.querySelector(".disabledbutton");
+        let buttonColour = document.querySelector(".button");
+        let usn = document.getElementById("usn").value;
+        let changeStyle = document.querySelector(".loginerror");
+        let pattern = /1BM\d\d[A-Z][A-Z]\d\d\d/g;
+        if (pattern.test(usn) && usn.length != 0 && password.length >= 8) {
+            disButton.style.pointerEvents = "auto";
+            buttonColour.style.backgroundColor = "rgb(65, 179, 235)";
+
+        }
+        else {
+            disButton.style.pointerEvents = "none";
+            buttonColour.style.backgroundColor = "rgb(117, 203, 246)";
         }
     }
 </script>
@@ -36,7 +59,7 @@
                 <p class="loginerror inline">Enter Valid USN</p>
             </div>
             <div class="input">
-                <input type="text" name="usn" id="usn" placeholder="Enter USN" />
+                <input type="text" name="usn" id="usn" placeholder="Enter USN" onclick="hide()" oninput="check()" />
             </div>
         </div>
         <div class="inputbox">
@@ -45,11 +68,11 @@
             </div>
             <div class="input">
                 <input type="password" name="password" id="password" placeholder="Enter your password"
-                    onclick="validate()" />
+                    onfocus="validate()" oninput="check()" />
             </div>
         </div>
         <div class="button">
-            <a href="./student/student.html">
+            <a href="./student/student.html" class="disabledbutton">
                 <div class="signin">Sign In</div>
             </a>
         </div>

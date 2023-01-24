@@ -60,7 +60,7 @@ input {
   text-align: center;
   width: 90%;
   height: 2.3rem;
-  background-color: rgb(65, 179, 235);
+  background-color: rgb(117, 203, 246);
   margin: 30px 0px 10px 0px;
   border-radius: 4px;
 }
@@ -96,6 +96,11 @@ a {
   animation: blink 2.5s linear infinite;
 }
 
+.disabledbutton {
+  
+  pointer-events: none;
+}
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -111,5 +116,26 @@ a {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .login-container {
+    position: relative;
+    top: 85px;
+    width: 22rem;
+    height: 28rem;
+  }
+  .mainheading {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login-container {
+    position: relative;
+    top: 85px;
+    width: 20rem;
+    height: 27rem;
   }
 }
