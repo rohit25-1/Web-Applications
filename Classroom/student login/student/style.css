@@ -9,7 +9,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background: #0d1117;
 }
 
@@ -105,12 +105,12 @@ p {
   width: 80%;
   margin: auto;
   position: relative;
-  top: 20%;
+  top: 15%;
 }
 
 .desc {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 h1 {
@@ -128,7 +128,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-h2{
+h2 {
   position: relative;
   top: 6px;
 }
