@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <!-- saved from url=(0043)https://cdcd-171-76-86-185.ngrok.io/Sudoku/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoku</title>
-    <script src="./sudoku.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="./Sudoku_files/css2" rel="stylesheet">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku</title>
+  <script src="./sudoku.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Sudoku_files/css2" rel="stylesheet">
   <style>
     body {
       background-color: rgb(39, 39, 39);
       font-family: "Ubuntu", sans-serif;
     }
+
     input {
       background-color: rgb(39, 39, 39);
       width: 59px;
@@ -24,23 +28,26 @@
       text-align: center;
       color: white;
     }
+
     button {
       width: 50px;
       display: block;
       margin: auto;
       margin-top: 50px;
     }
+
     td,
     th {
       background-color: rgb(39, 39, 39);
     }
+
     table {
       width: 40%;
       height: 40%;
       border-collapse: collapse;
       border: 2px solid rgb(255, 255, 255);
       margin: auto;
-	  max-width:500px;
+      max-width: 500px;
     }
 
     h1 {
@@ -64,34 +71,36 @@
       transition: transform 400ms;
       /* transition: transform 1300ms; */
     }
-	
-	@media only screen and (max-width: 500px)
-	{
-		input{
-		    background-color: rgb(39, 39, 39);
-		width: 6.9vw;
-		height: 3vh;
-		border: none;
-		font-size: large;
-		font-weight: bold;
-		text-align: center;
-		color: white;
-		}
-		table{
-		    width: 30vw;
-			height: 30vh;
-			border-collapse: collapse;
-			border: 2px solid rgb(255, 255, 255);
-			margin: auto;
-		}
-	}
-  </style></head>
 
-  
-  <body cz-shortcut-listen="true">
-    <h1>Sudoku Solver</h1>
-    <table border="1">
-      <tbody><tr>
+    @media only screen and (max-width: 723px) {
+      input {
+        background-color: rgb(39, 39, 39);
+        width: 6vw;
+        height: 6vw;
+        border: none;
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+      }
+
+      table {
+        width: 40vw;
+        height: 40vw;
+        border-collapse: collapse;
+        border: 2px solid rgb(255, 255, 255);
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+
+<body cz-shortcut-listen="true">
+  <h1>Sudoku Solver</h1>
+  <table border="1">
+    <tbody>
+      <tr>
         <td><input type="text" name="" id="row1column1"></td>
         <td><input type="text" name="" id="row1column2"></td>
         <td><input type="text" name="" id="row1column3"></td>
@@ -190,8 +199,11 @@
         <td><input type="text" name="" id="row9column8"></td>
         <td><input type="text" name="" id="row9column9"></td>
       </tr>
-    </tbody></table>
-    <button onclick="solver()">Solve</button>
-  
+    </tbody>
+  </table>
+  <button onclick="solver()">Solve</button>
 
-</body></html>
+
+</body>
+
+</html>
