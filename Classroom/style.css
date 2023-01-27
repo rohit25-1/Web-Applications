@@ -32,7 +32,6 @@ body {
 .logotext {
   font-family: "IBM Plex Mono", monospace;
   text-align: center;
-  font-weight: 800;
   margin-top: 30px;
   font-size: 200%;
   letter-spacing: 12px;
@@ -122,15 +121,14 @@ a {
 }
 
 @media screen and (max-width: 885px) {
-  .mainpage{
+  .mainpage {
     display: flex;
     flex-direction: column;
   }
-  .logotext
-  {
+  .logotext {
     font-size: 100%;
   }
-  .left-login{
+  .left-login {
     position: relative;
     width: 70%;
     top: 30px;
@@ -138,21 +136,21 @@ a {
     height: min-content;
   }
 
-  .right-login{
+  .right-login {
     height: min-content;
     position: relative;
     top: 54px;
     width: min-content;
-    margin: auto
+    margin: auto;
   }
 
-  .imgcontainer{
+  .imgcontainer {
     position: static;
     width: 350px;
     margin: auto;
   }
 
-  .logoimage{
+  .logoimage {
     margin: auto;
   }
 }

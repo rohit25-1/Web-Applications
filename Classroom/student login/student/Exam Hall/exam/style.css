@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@
 
 body {
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   background: #0d1117;
 }
 
@@ -64,7 +63,7 @@ img {
   background-color: transparent;
   padding: 0;
   position: relative;
-  top: -12px;
+  top: -22px;
   float: right;
 }
 
@@ -72,64 +71,45 @@ img {
   box-shadow: none;
 }
 
-.block {
-  display: block;
-}
-
-.inline {
-  display: inline-block;
-  width: 20rem;
-  height: 20rem;
-  margin-top: 50px;
-  border-radius: 10px;
-  border: 1px solid #30363d;
-  box-shadow: 0px 0px 20px 1px #2b384b;
-}
-
-p {
-  margin: 20px;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  text-align: justify;
-}
-
-.white {
-  color: rgb(255, 255, 255);
-}
-
-.welcomeheading {
-  text-align: center;
+.heading {
   color: white;
+  margin-bottom: 40px;
 }
 
-.container {
+.pageContents
+{
+  position: relative;
+  left: 80px;
+  top: 30px;
+}
+
+.examContainer {
   width: 80%;
-  margin: auto;
+  height: 8rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 1px #2b384b;
+  background-color: #161a22;
+  color: white;
+  border: 1px solid #30363d;
+  padding: 30px;
+}
+
+.examName {
+  font-size: 40px;
+}
+
+.right{
+  float: right;
   position: relative;
-  top: 15%;
+  bottom: 50px;
 }
 
-.desc {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-h1 {
-  font-size: 100px;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.554);
-}
-
-.descheading {
-  color: #58a6ff;
-  text-align: center;
-  background-color: #161b22;
-  height: 50px;
-  border-radius: 10px 10px 0px 0px;
-  margin-bottom: 30px;
-}
-
-h2 {
+img{
   position: relative;
-  top: 6px;
+  top: 10px;
+}
+
+.examContainer:hover{
+  transform: scale(1.01);
+  transition: transform 300ms;
 }
