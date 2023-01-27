@@ -9,17 +9,23 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #222222;
+  display: flex;
+  align-items: center;
 }
 
 .login-container {
   width: 28rem;
   height: 30rem;
   margin: auto;
-  position: relative;
-  top: 12rem;
+  /* position: relative;
+  top: 12%; */
+  /* position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
   background-color: #222222;
   box-shadow: 0px 0px 25px 10px rgb(48, 48, 48);
   color: white;
