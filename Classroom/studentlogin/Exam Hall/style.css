@@ -74,10 +74,11 @@ img {
 .heading {
   color: white;
   margin-bottom: 40px;
+  width: 80%;
 }
 
-.pageContents
-{
+.pageContents {
+  width: 99vw;
   position: relative;
   left: 80px;
   top: 30px;
@@ -98,18 +99,57 @@ img {
   font-size: 40px;
 }
 
-.right{
+.right {
   float: right;
   position: relative;
   bottom: 50px;
 }
 
-img{
+img {
   position: relative;
   top: 10px;
 }
 
-.examContainer:hover{
+.examContainer:hover {
   transform: scale(1.01);
   transition: transform 300ms;
+}
+
+.examCode {
+  display: inline;
+  float: right;
+  width: 150px;
+  height: 40px;
+  background-color: #00d5ffef;
+  color: black;
+  text-align: center;
+  position: relative;
+  bottom: -25px;
+  border-radius: 10px;
+}
+
+.examCode:hover{
+  transform: scale(1.05);
+  transition: transform 300ms;
+}
+
+
+span {
+  display: inline;
+}
+
+h1 {
+  display: inline;
+}
+
+p {
+  position: relative;
+  top: 20%;
+  display: inline;
+}
+
+.fa-solid, .fas{
+  position: relative;
+  top: 8px;
+  right: 3px;
 }
