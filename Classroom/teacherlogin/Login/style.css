@@ -11,15 +11,16 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  background: #222222;
+  background: #0d1117;
 }
 
 .login-container {
-  align-items: center;
+  position: relative;
+  bottom: 2vh;
   width: 28rem;
   height: 30rem;
   margin: auto;
-  background-color: #222222;
+  background-color: #0D1117;
   box-shadow: 0px 0px 25px 10px rgb(48, 48, 48);
   color: white;
   padding: 40px;

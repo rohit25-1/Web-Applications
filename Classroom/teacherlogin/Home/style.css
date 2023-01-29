@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
 
 body {
   width: 100vw;
-  height: 120vh;
+  height: 140vh;
   background: #0d1117;
 }
 
@@ -82,6 +83,7 @@ img {
   margin-top: 50px;
   border-radius: 10px;
   border: 1px solid #30363d;
+  box-shadow: 0px 0px 20px 1px #2b384b;
 }
 
 p {
@@ -104,7 +106,7 @@ p {
   width: 80%;
   margin: auto;
   position: relative;
-  top: 15%;
+  top: 10%;
 }
 
 .desc {
@@ -114,8 +116,7 @@ p {
 }
 
 h1 {
-  font-size: 100px;
-  font-weight: 800;
+  font-size: 600%;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.554);
 }
 
@@ -131,4 +132,37 @@ h1 {
 h2 {
   position: relative;
   top: 6px;
+}
+
+
+.dropdown {
+  width: 100px;
+  height: 100px;
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuitems{
+  display: none;
+  position: relative;
+  top:-15px;
+  right: 20px;
+  color:white;
+  width: 160px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #1d304f;
+}
+
+.logout{
+  position: relative;
+  top: 25%;
+}
+
+
+.dropdown:hover .menuitems {
+  display: block;
+  /* transition: display 300ms; */
 }

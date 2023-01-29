@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Hall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    var code = "";
+    function makeid(length) {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            counter += 1;
+        }
+        document.querySelector("#examcode").value = result;
+    }
+
+    function uploadQP() {
+        document.getElementById("fileUpload").click();
+    }
+
+</script>
+
+
+<body>
+    <nav>
+        <div class="navElements">
+            <ul>
+                <a class="home" href="../Home/index.html">
+                    <li>Home</li>
+                </a>
+                <a href="../Create Exam/index.html">
+                    <li>Create Exam</li>
+                </a>
+                <a href="../Exam History/index.html">
+                    <li>Exam History</li>
+                </a>
+                <a href="../Student List/index.html">
+                    <li>Student List</li>
+                </a>
+                <a href="#">
+                    <li>Profile</li>
+                </a>
+                <a href="#">
+                    <li class="image"><img src="../../assets/teacher.png" alt=""></li>
+                </a>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="heading">
+            <h1>Welcome to Create Exam Hall, Raji.</h1>
+            <h5 style="margin-top: 3px;">Please Click On Generate Code And Upload Question Paper, Set Time And Duration
+                For Exam</h5>
+        </div>
+        <form action="../Create Exam/index.html" method="post">
+            <div class="inputCode">
+                <p class="label">Code: </p>
+                <input type="text" name="examcode" id="examcode" maxlength="5" placeholder="click on generate code"
+                    required>
+                <input type="button" class="generateButton" onclick="makeid(5)" value="Generate"></input>
+                <p class="label">Semester:</p>
+                <input type="number" name="" id="semester" required>
+                <p class="label">Date:</p>
+                <input type="date" name="" id="date" required>
+                <p class="label">Time:</p>
+                <input type="time" name="" id="time" required>
+                <p class="label">Question Paper</p>
+                <input type="button" class="generateButton" onclick="uploadQP()" value="Upload"></input>
+                <input type="file" name="" id="fileUpload" hidden>
+                <button type="submit" class="generateButton block">Create Exam</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

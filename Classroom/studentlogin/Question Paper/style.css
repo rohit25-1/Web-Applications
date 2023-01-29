@@ -9,7 +9,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   background: #0d1117;
 }
 
@@ -69,4 +69,93 @@ img {
 
 .image:hover {
   box-shadow: none;
+}
+
+.heading {
+  color: white;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.pageContents {
+  width: 99vw;
+  position: relative;
+  left: 80px;
+  top: 30px;
+}
+
+.questionPaper {
+  width: fit-content;
+  margin-top: 50px;
+}
+
+iframe {
+  border-radius: 10px;
+  border: none;
+}
+
+.actionbuttons {
+  width: fit-content;
+  margin-left: 80px;
+  margin-top: 100px;
+}
+
+.uploadPDF {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #00d5ffef;
+  color: black;
+  text-align: center;
+  margin-left: 30px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 13px;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.uploadPDF:hover {
+  transform: scale(1.05);
+  transition: transform 300ms;
+}
+
+h1 {
+  display: inline;
+}
+
+input {
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #00d5ffd7;
+  margin: 10px;
+}
+
+input:hover {
+  box-shadow: 0px 0px 20px 2px #8fe1f1d7;
+  transform: scale(1.03);
+  transition: transform 300ms;
+}
+
+p {
+  position: relative;
+  top: 20%;
+  display: inline;
+}
+.fa-solid,
+.fas {
+  position: relative;
+  top: 8px;
+  right: 3px;
+}
+
+
+form{
+  display: inline;
 }

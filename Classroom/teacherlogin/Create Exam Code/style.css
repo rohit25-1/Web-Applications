@@ -9,7 +9,7 @@
 
 body {
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   background: #0d1117;
 }
 
@@ -70,77 +70,75 @@ img {
 .image:hover {
   box-shadow: none;
 }
-.heading {
-  color: white;
-  margin-bottom: 40px;
-  width: 80%;
-}
-
-.pageContents{
-  margin-bottom: 60px;
-}
-
-.profileContainer {
+.container {
+  width: 35rem;
   border: 1px solid #30363d;
-  box-shadow: 0px 0px 20px 1px #2b384b;
-  /* background: rgba(50, 50, 117, 0.475); */
-  padding: 20px;
   border-radius: 10px;
-  width: 50vw;
-  color: white;
+  margin: auto;
   position: relative;
   top: 5%;
-  left: 60px;
+  box-shadow: 0px 0px 20px 1px #2b384b;
+  background-color: #0d1117;
+  color: white;
+  padding: 55px 25px;
 }
 
-.inline {
-  display: inline;
+.inputCode {
+  position: relative;
+  top: 10%;
 }
 
-.innercontainer {
-  margin-top: 30px;
+.label {
+  margin-left: 3px;
 }
-
-.label,.content
-{
-  font-size: 25px;
-  letter-spacing: 0.3px;
-}
-
-.content{
-  margin-left: 5px;
-}
-
-table{
-  border-collapse: collapse;
-  margin-top: 20px;
-  text-align: center;
-  margin-bottom: 30px;
-  box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.317);
+input {
+  width: 80%;
+  height: 3rem;
   border-radius: 10px;
-}
-
-
-
-hr{
-  margin: 15px;
-  border: 0.2px solid black;
-}
-
-td{
   padding: 10px;
 }
 
-.faculty{
+.enterButton {
   margin-top: 30px;
+  width: 40%;
+  height: 2.3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #00d5ffd7;
 }
 
-h1{
-  font-size: 50px;
-  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.805);
+.enterButton:hover {
+  transform: translateX(10px) translateY(10px) scale(1.1);
+  transition: transform 300ms;
 }
 
-.largeImage{
-  width: 290px;
-  margin-right: 30px;
+.generateButton {
+  margin-top: 10px;
+  width: 40%;
+  height: 2.3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #00d5ffd7;
+}
+
+.generateButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 1px rgba(0, 179, 255, 0.436);
+  transition: transform 300ms;
+}
+
+.label {
+  margin-top: 20px;
+}
+
+.block {
+  display: block;
+  margin: 20px auto 0px auto;
+  background-color: #00ffaeae;
+}
+
+.generateButton {
+  text-align: center;
 }

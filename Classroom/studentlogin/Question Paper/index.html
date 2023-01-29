@@ -7,7 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structures With C</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/52a1890fd9.js" crossorigin="anonymous"></script>
 </head>
+
+
+
+<script>
+    function fileUpload() {
+        document.getElementsByClassName("hidden-file")[0].click()
+    }
+    function submitForm()
+    {
+        document.getElementsByClassName("hidden-submit")[0].click()
+    }
+</script>
 
 <body>
     <nav>
@@ -32,6 +45,35 @@
         </div>
 
     </nav>
+
+
+    <div class="pageContents">
+        <div class="heading">
+            <h1>Data Structures With C</h1>
+            <a>
+                <div class="uploadPDF" id="buttonid" onclick="fileUpload()">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Upload PDF</p>
+                </div>
+            </a>
+            <form action="post">
+                <input type="file" name="pdf" id="pdf" hidden class="hidden-file">
+                <a>
+                    <div class="uploadPDF submit" onclick="submitForm()">
+                        <i class="fa-solid fa-tick"></i>
+                        <p>Submit</p>
+                    </div>
+                </a>
+                <button type="submit" hidden class="hidden-submit"></button>
+            </form>
+        </div>
+
+        <div class="questionPaper">
+            <iframe src="../../assets/QuestionPapers/DSC/dsc-cie1.pdf" width="800" height="900">
+            </iframe>
+        </div>
+    </div>
+
 </body>
 
 </html>
