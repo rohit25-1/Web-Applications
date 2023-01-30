@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forgot Password</title>
+</head>
+
+<script>
+    function validate() {
+        let usn = document.getElementById("usn").value;
+        let changeStyle = document.querySelector(".loginerror");
+        let pattern = /1BM\d\d[A-Z][A-Z]\d\d\d/g;
+        if (!pattern.test(usn) && usn.length != 0) {
+            changeStyle.style.display = 'inline';
+        }
+        else {
+            changeStyle.style.display = 'none';
+        }
+    }
+
+    function hide() {
+        let changeStyle = document.querySelector(".loginerror");
+        changeStyle.style.display = 'none';
+    }
+
+    function check() {
+        let password = document.querySelector("#password").value;
+        let disButton = document.querySelector(".disabledbutton");
+        let buttonColour = document.querySelector(".button");
+        let usn = document.getElementById("usn").value;
+        let changeStyle = document.querySelector(".loginerror");
+        let pattern = /1BM\d\d[A-Z][A-Z]\d\d\d/g;
+        if (pattern.test(usn) && usn.length != 0 && password.length >= 8) {
+            disButton.style.pointerEvents = "auto";
+            buttonColour.style.backgroundColor = "rgb(65, 179, 235)";
+
+        }
+        else {
+            disButton.style.pointerEvents = "none";
+            buttonColour.style.backgroundColor = "rgb(117, 203, 246)";
+        }
+    }
+    function validatePassword() {
+        let password = document.querySelector("#password").value;
+        let len = document.querySelector(".length");
+        let special = document.querySelector(".special");
+        let upper = document.querySelector(".upper");
+        let numb = document.querySelector(".number");
+        let ctr = 0;
+        if (password.length > 7) {
+            len.style.color = "#38d61c";
+            ctr++;
+        }
+        else {
+            len.style.color = "rgb(194, 54, 54)";
+        }
+        let reg1 = /\d/g;
+        if (reg1.test(password)) {
+            numb.style.color = "#38d61c";
+            ctr++;
+        }
+        else {
+            numb.style.color = "rgb(194, 54, 54)";
+        }
+        let reg2 = /[A-Z]/g;
+        if (reg2.test(password)) {
+            upper.style.color = "#38d61c";
+            ctr++;
+        }
+        else {
+            upper.style.color = "rgb(194, 54, 54)";
+        }
+        let reg3 = /[!@#$%^&*?]/g;
+        if (reg3.test(password)) {
+            special.style.color = "#38d61c";
+            ctr++;
+        }
+        else {
+            special.style.color = "rgb(194, 54, 54)"
+        }
+        if (ctr == 4) {
+            len.style.display = 'none';
+            numb.style.display = 'none';
+            upper.style.display = 'none';
+            special.style.display = 'none';
+            return 1;
+        }
+        else {
+            len.style.display = 'block';
+            numb.style.display = 'block';
+            upper.style.display = 'block';
+            special.style.display = 'block';
+        }
+
+    }
+
+    function passwordMatch() {
+        let password1 = document.querySelector("#password").value;
+        let password2 = document.querySelector("#passwordAgain").value;
+        let changeStyle1 = document.querySelector(".passwordmatch");
+        if (password1 !== password2) {
+            changeStyle1.style.display = 'block';
+        }
+        else {
+            changeStyle1.style.display = 'none';
+
+        }
+        let password = document.querySelector("#password").value;
+        let disButton = document.querySelector(".disabledbutton");
+        let buttonColour = document.querySelector(".button");
+        let usn = document.getElementById("usn").value;
+        let changeStyle = document.querySelector(".loginerror");
+        let pattern = /1BM\d\d[A-Z][A-Z]\d\d\d/g;
+        if (pattern.test(usn) && usn.length != 0 && password.length >= 8 && password1 === password2) {
+            disButton.style.pointerEvents = "auto";
+            buttonColour.style.backgroundColor = "rgb(65, 179, 235)";
+
+        }
+        else {
+            disButton.style.pointerEvents = "none";
+            buttonColour.style.backgroundColor = "rgb(117, 203, 246)";
+        }
+
+    }
+</script>
+
+
+<body>
+    <div class="login-container">
+        <div class="headings">
+            <h2 class="mainheading">Password Reset</h2>
+        </div>
+        <div class="inputbox">
+            <div class="namebox">
+                <p class="inputname inline">USN</p>
+                <p class="loginerror inline">Enter Valid USN</p>
+            </div>
+            <div class="input">
+                <input type="text" name="usn" id="usn" placeholder="Enter USN" onclick="hide()" onblur="validate()" />
+            </div>
+        </div>
+        <div class="inputbox">
+            <div class="namebox">
+                <p class="inputname">Enter Password</p>
+                <div class="passwordContainer">
+                    <p class="passwordCheck inline up special">Special Characters</p>
+                    <p class="passwordCheck inline up upper">Uppercase</p>
+                    <p class="passwordCheck inline up number">Numbers</p>
+                    <p class="passwordCheck inline up length">Length > 7</p>
+                </div>
+
+            </div>
+            <div class="input">
+                <input type="password" name="password" id="password" placeholder="Enter your password"
+                    oninput="validatePassword()" />
+            </div>
+        </div>
+        <div class="inputbox">
+            <div class="namebox">
+                <p class="inputname">Enter Password Again</p>
+                <p class="loginerror passwordmatch inline up">Password Doesnt Match</p>
+            </div>
+            <div class="input">
+                <input type="password" name="password" id="passwordAgain" placeholder="Enter your password"
+                    oninput="passwordMatch()" />
+            </div>
+        </div>
+        <div class="button">
+            <a href="../Home/index.html" class="disabledbutton">
+                <div class="signin">Reset Password</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -19,14 +19,8 @@ body {
   position: relative;
   bottom: 2vh;
   width: 28rem;
-  height: 32rem;
+  height: 33rem;
   margin: auto;
-  /* position: relative;
-  top: 12%; */
-  /* position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
   background-color: #0d1117;
   box-shadow: 0px 0px 25px 10px rgb(48, 48, 48);
   color: white;
@@ -146,3 +140,24 @@ a {
     height: 27rem;
   }
 }
+
+.up {
+  position: relative;
+  top: -2px;
+  animation: none;
+}
+
+.passwordCheck {
+  float: right;
+  margin-right: 19px;
+  margin: 3px 19px 3px 0px;
+  font-size: small;
+  display: none;
+  color: rgb(194, 54, 54);
+}
+
+.passwordContainer{
+    width: max-content;
+}
+
+
