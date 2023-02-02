@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Hall</title>
+    <title>Data Structures With C</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/52a1890fd9.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/52a1890fd9.js" crossorigin="anonymous"></script>
 </head>
+
+
+
+<script>
+    function fileUpload() {
+        document.getElementsByClassName("hidden-file")[0].click()
+    }
+    function submitForm()
+    {
+        document.getElementsByClassName("hidden-submit")[0].click()
+    }
+</script>
 
 <body>
     <nav>
@@ -18,7 +29,7 @@
                 <a href="../Home/index.html">
                     <li>Home</li>
                 </a>
-                <a href="#">
+                <a href="../Exam Hall/index.html">
                     <li>Exam Hall</li>
                 </a>
                 <a href="../Exam History/index.html">
@@ -35,29 +46,15 @@
 
     </nav>
 
+
     <div class="pageContents">
         <div class="heading">
-            <h1>Upcoming Exams</h1>
-            <a href="../Exam Code/index.html" class="inline">
-                <div class="examCode">
-                    <i class="fa-solid fa-plus"></i>
-                    <p>Add Code</p>
-                </div>
-            </a>
+            <h1>Data Structures With C</h1>
+            
+        <div class="questionPaper">
+            <iframe src="../../assets/QuestionPapers/DSC/dsc-cie1.pdf" width="800" height="900">
+            </iframe>
         </div>
-
-        <a href="../Question Paper/index.html">
-            <div class="examContainer">
-
-                <div class="examName"><img src="../../assets/datastructures.png" alt=""> Data Structures With C
-                </div>
-                <div class="right">
-                    <div class="examStart">Exam Start: 11:15 AM</div>
-                    <div class="examDuration">Exam Duration: 2 hours</div>
-                </div>
-            </div>
-        </a>
-
     </div>
 
 </body>

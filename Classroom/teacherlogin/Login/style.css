@@ -80,6 +80,9 @@ a {
 .loginfooter {
   width: 90%;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .forgotpassword {
   float: right;

@@ -115,7 +115,7 @@
         let usn = document.getElementById("usn").value;
         let changeStyle = document.querySelector(".loginerror");
         let pattern = /1BM\d\d[A-Z][A-Z]\d\d\d/g;
-        if (pattern.test(usn) && usn.length != 0 && password.length >= 8 && password1 === password2) {
+        if (password.length >= 8 && password1 === password2) {
             disButton.style.pointerEvents = "auto";
             buttonColour.style.backgroundColor = "rgb(65, 179, 235)";
 
@@ -136,11 +136,11 @@
         </div>
         <div class="inputbox">
             <div class="namebox">
-                <p class="inputname inline">USN</p>
-                <p class="loginerror inline">Enter Valid USN</p>
+                <p class="inputname inline">Techer ID</p>
+                <p class="loginerror inline">Enter Valid Teacher ID</p>
             </div>
             <div class="input">
-                <input type="text" name="usn" id="usn" placeholder="Enter USN" onclick="hide()" onblur="validate()" />
+                <input type="text" name="usn" id="usn" placeholder="Enter ID"/>
             </div>
         </div>
         <div class="inputbox">
@@ -170,7 +170,7 @@
             </div>
         </div>
         <div class="button">
-            <a href="../Home/index.html" class="disabledbutton">
+            <a href="../Login/index.html" class="disabledbutton">
                 <div class="signin">Reset Password</div>
             </a>
         </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Hall</title>
+    <title>Create Exam Code</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -43,10 +43,8 @@
                 <a href="../Exam History/index.html">
                     <li>Exam History</li>
                 </a>
-                <a href="../Student List/index.html">
-                    <li>Student List</li>
-                </a>
-                <a href="#">
+
+                <a href="../Profile/index.html">
                     <li>Profile</li>
                 </a>
                 <a href="#">
@@ -62,24 +60,23 @@
             <h5 style="margin-top: 3px;">Please Click On Generate Code And Upload Question Paper, Set Time And Duration
                 For Exam</h5>
         </div>
-        <form action="../Create Exam/index.html" method="post">
-            <div class="inputCode">
-                <p class="label">Code: </p>
-                <input type="text" name="examcode" id="examcode" maxlength="5" placeholder="click on generate code"
-                    required>
-                <input type="button" class="generateButton" onclick="makeid(5)" value="Generate"></input>
-                <p class="label">Semester:</p>
-                <input type="number" name="" id="semester" required>
-                <p class="label">Date:</p>
-                <input type="date" name="" id="date" required>
-                <p class="label">Time:</p>
-                <input type="time" name="" id="time" required>
-                <p class="label">Question Paper</p>
-                <input type="button" class="generateButton" onclick="uploadQP()" value="Upload"></input>
-                <input type="file" name="" id="fileUpload" hidden>
-                <button type="submit" class="generateButton block">Create Exam</button>
-            </div>
-        </form>
+        <div class="inputCode">
+            <p class="label">Code: </p>
+            <input type="text" name="examcode" id="examcode" maxlength="5" placeholder="click on generate code"
+                required>
+            <input type="button" class="generateButton" onclick="makeid(5)" value="Generate"></input>
+            <p class="label">Semester:</p>
+            <input type="number" name="" id="semester" required>
+            <p class="label">Date:</p>
+            <input type="date" name="" id="date" required>
+            <p class="label">Time:</p>
+            <input type="time" name="" id="time" required>
+            <p class="label">Question Paper</p>
+            <input type="button" class="generateButton" onclick="uploadQP()" value="Upload"></input>
+            <input type="file" name="" id="fileUpload" hidden>
+            <a href="../Create Exam/index.html"><button type="submit" class="generateButton block">Create
+                    Exam</button></a>
+        </div>
     </div>
 
 </body>
