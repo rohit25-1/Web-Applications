@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Switch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <script>
+    let state = false;
+    function changeColor() {
+      if (!state) {
+        button = document.querySelector(".innercircle");
+        back = document.querySelector(".outerradius");
+        back.style.background = "#5BDB4E";
+        back.style.border = "2px solid #66CB66";
+        button.style.animation = "move-right 500ms forwards ease";
+        button.style.cssFloat = "right";
+        button.style.right = "50px";
+
+        document.querySelector(".container").style.background = "#1C1C1D";
+
+        state = !state;
+      } else {
+        button = document.querySelector(".innercircle");
+        back = document.querySelector(".outerradius");
+        back.style.background = "#e9e9ea";
+        back.style.border = "2px solid #e9e9ea";
+        button.style.animation = "move-left 500ms forwards ease";
+        button.style.cssFloat = "left";
+        button.style.right = "-3px";
+        state = !state;
+        document.querySelector(".container").style.background = "#FFFFFF";
+      }
+      console.log(state);
+    }
+  </script>
+  <body>
+    <h1>iOS Switch</h1>
+    <div class="container">
+      <div class="outerradius">
+        <div class="innercircle" onclick="changeColor()"></div>
+      </div>
+    </div>
+  </body>
+</html>
