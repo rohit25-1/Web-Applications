@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "SF-PRO";
+  src: url("./font/SF-Pro.ttf");
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "SF-PRO", sans-serif;
 
   box-sizing: border-box;
 }
@@ -14,28 +18,44 @@
 }
 
 body {
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
+}
+
+.notch {
+  width: 12rem;
+  height: 2.3rem;
+  background-color: rgb(32, 32, 32);
+  margin: auto;
+  position: sticky;
+  top: 0;
+  border-radius: 0px 0px 23px 23px;
+  z-index: 2;
 }
 .center {
   flex-direction: column;
   justify-content: flex-end;
 }
-
 nav {
-  top: 0%;
-  right: 0.2%;
-  width: 100%;
-  height: 5rem;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  display: none;
+  position: relative;
 }
 
-.l3 {
-  position: fixed;
-  width: 19%;
+.navcontainer {
+  position: sticky;
+  height: 5rem;
+  top: 0;
+  margin-bottom: 40px;
+  visibility: hidden;
+  position: -webkit-sticky
+  
+}
+
+.navbar {
+  width: 23.5rem;
+  position: relative;
+  right: 16px;
+
+  box-sizing: content-box;
   background-color: rgba(255, 255, 255, 0.439);
   height: 5rem;
   backdrop-filter: blur(20px);
@@ -43,21 +63,22 @@ nav {
 
 .navtitle {
   text-align: center;
-  font-weight: 800;
-  font-size: 20px;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
+  font-weight: 701;
+  font-size: 18px;
+  margin-bottom: 7px;
 }
 .container {
-  width: 23rem;
+  border: 12px solid rgb(32, 32, 32);
+  width: 24rem;
   height: 50rem;
-  border-radius: 20px;
+  border-radius: 65px;
   background-color: rgb(242, 241, 247);
-  margin: auto;
   position: relative;
-  top: 12%;
-  padding: 14px;
-  padding-top: 100px;
+  top: 15px;
+  margin: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  scroll-behavior: smooth;
   overflow-y: scroll;
 }
 
@@ -67,12 +88,12 @@ nav {
 
 .heading {
   color: rgb(27, 27, 27);
-  font-family: "Roboto", sans-serif;
+  font-family: "SF-PRO", sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 701;
   letter-spacing: 1px;
   font-size: 40px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .searchbox {
@@ -89,7 +110,7 @@ nav {
   background-color: rgb(227, 226, 232);
   border: none;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 301;
   margin-left: 4px;
 }
 
@@ -116,11 +137,11 @@ nav {
 
 .lefticon {
   width: 25px;
-  margin: 10px 18px 4px 13px;
+  margin: 4px 14px 1px 13px;
 }
 .generalicon {
   width: 33px;
-  margin: 2px 14px 2px 7px;
+  margin: 5px 14px 2px 7px;
 }
 
 .cursor {
@@ -139,14 +160,14 @@ nav {
 }
 
 .mainheading {
-  font-weight: 400;
+  font-weight: 401;
   width: 180px;
   font-size: 23px;
   margin-bottom: 1px;
 }
 
 .lowerheading {
-  font-weight: 300;
+  font-weight: 350;
   width: 180px;
   font-size: 13px;
 }
@@ -160,9 +181,9 @@ nav {
 }
 
 .generalheading {
-  width: 190px;
+  width: 200px;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 401;
 }
 
 .imagewithheading {
@@ -185,7 +206,6 @@ nav {
   border: 1px solid #e9e9ea;
   cursor: pointer;
   margin-right: 10px;
-  /* transform: scale(0.92); */
 }
 
 .innercircle {
@@ -196,7 +216,6 @@ nav {
   top: 1.28px;
   background-color: white;
   border-radius: 50px;
-  /* box-shadow: 0px 0px 5px 2px #e5e5e5; */
 }
 
 .outerradius1 {
@@ -207,7 +226,6 @@ nav {
   border: 1px solid #e9e9ea;
   cursor: pointer;
   margin-right: 10px;
-  /* transform: scale(0.92); */
 }
 
 .innercircle1 {
@@ -218,7 +236,6 @@ nav {
   top: 1.28px;
   background-color: white;
   border-radius: 50px;
-  /* box-shadow: 0px 0px 5px 2px #e5e5e5; */
 }
 
 .innercircle1:active {
@@ -255,5 +272,25 @@ hr {
   border: 0.2px solid rgba(181, 181, 181, 0.297);
   width: 83%;
   margin-left: auto;
-  margin-top: 2px;
+  margin-top: 1px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
 }

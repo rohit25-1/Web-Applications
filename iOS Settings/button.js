@@ -39,8 +39,6 @@ function changeColor2() {
     button.style.right = "20px";
     button.style.top = "0.1px";
     darkmode();
-    // document.querySelector(".container").style.background = "#1C1C1D";
-
     state2 = !state2;
   } else {
     button = document.querySelector(".innercircle1");
@@ -53,7 +51,6 @@ function changeColor2() {
     button.style.top = "0.1px";
     state2 = !state2;
     lightmode();
-    // document.querySelector(".container").style.background = "#FFFFFF";
   }
 }
 
@@ -62,8 +59,10 @@ function darkmode() {
   body = document.body;
   whitebox = document.getElementsByClassName("whitebox");
   heading = document.getElementsByClassName("heading")[0];
-  nav = document.querySelector(".l3");
+  nav = document.querySelector(".navbar");
   inp = document.querySelector(".inpsearch");
+  airpods = document.getElementsByClassName("lefticon")[0];
+  airpods.src = "./icons/airpods-dark.svg";
   outerradius = document.querySelector(".outerradius");
   searchbox = document.querySelector(".searchbox");
   inp.style.background = "rgb(28,28,30)";
@@ -93,6 +92,8 @@ function lightmode() {
   inp.style.background = "rgb(227, 226, 232)";
   outerradius.style.background = "#e9e9ea";
   outerradius.style.border = " 1px solid #e9e9ea";
+  airpods = document.getElementsByClassName("lefticon")[0];
+  airpods.src = "./icons/airpods.svg";
   searchbox.style.background = "rgb(227, 226, 232)";
   for (let i = 0; i < whitebox.length; i++)
     whitebox[i].style.background = "rgb(255, 255, 255)";

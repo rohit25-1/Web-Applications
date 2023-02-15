@@ -1,494 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iOS Settings</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="./button.js"></script>
-</head>
-<script>
+  </head>
+  <script>
     function scroller() {
-        var myScreen = document.getElementsByClassName("container")[0];
-        var navBar = document.querySelector(".navbar");
-        if (myScreen.scrollTop >= 200) {
-            navBar.style.display = "block";
-        }
-        else {
-            navBar.style.display = "none";
-        }
-
+      var myScreen = document.getElementsByClassName("container")[0];
+      var navBar = document.querySelector(".navbar");
+      if (myScreen.scrollTop >= 100) {
+        navBar.style.animation = "200ms fadeIn forwards";
+      } else {
+        navBar.style.animation = "200ms fadeOut forwards";
+      }
     }
-</script>
-
-<body>
-
+  </script>
+  <body>
     <div class="container" onscroll="scroller()">
-        <nav class="navbar">
-            <div class="l3 flex center">
-                <p class="navtitle">Settings</p>
-            </div>
+        <div class="notch"></div>
 
-        </nav>
 
-        <div class="heading">Settings</div>
-        <div class="searchbox flex">
-            <div class="searchicon flex">
-                <img src="./icons/mag Background Removed.png" alt="" class="searchimage">
-            </div>
-            <input type="text" name="" id="" placeholder="Search" class="inpsearch">
+      <div class="navcontainer sticky">
+        <div class="navbar sticky flex center">
+          <p class="navtitle">Settings</p>
         </div>
-        <div class="whitebox flex cursor">
-            <div class="contents flex">
-                <div class="userimage fit inline">
-                    <img src="./icons/myimage1.jpeg" alt="" class="round">
-                </div>
-                <div class="desc inline">
-                    <p class="mainheading fit">
-                        Rohit Sridharan
-                    </p>
-                    <p class="lowerheading fit ">
-                        Apple ID, iCloud, Media & Purchases
-                    </p>
-                </div>
-            </div>
+      </div>
 
-            <div class="righticon fit inline">
-                <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-            </div>
+      <div class="heading">Settings</div>
+      <div class="searchbox flex">
+        <div class="searchicon flex">
+          <img
+            src="./icons/mag Background Removed.png"
+            alt=""
+            class="searchimage"
+          />
         </div>
-        <div class="whitebox flex cursor padding">
-            <div class="contents flex">
-                <div class="userimage fit inline">
-                    <img src="./icons/airpods.png" alt="" class="lefticon">
-                </div>
-                <div class="contents inline">
-                    <p class="generalheading fit">
-                        Rohit's Airpods Pro
-                    </p>
-                </div>
-            </div>
-
-            <div class="righticon fit inline">
-                <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-            </div>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Search"
+          class="inpsearch"
+        />
+      </div>
+      <div class="whitebox flex cursor">
+        <div class="contents flex">
+          <div class="userimage fit inline">
+            <img src="./icons/myimage1.jpeg" alt="" class="round" />
+          </div>
+          <div class="desc inline">
+            <p class="mainheading fit">Rohit Sridharan</p>
+            <p class="lowerheading fit">Apple ID, iCloud, Media & Purchases</p>
+          </div>
         </div>
 
-
-        <div class="whitebox cursor padding">
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/aeroplane.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Airplane Mode
-                        </p>
-                    </div>
-                </div>
-
-                <div class="switch fit inline">
-                    <div class="outerradius inline">
-                        <div class="innercircle" onclick="changeColor()"></div>
-                    </div>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/wifi Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Wi-Fi
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/bluetooth Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Bluetooth
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/data Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Mobile Data
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/hotspot Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Personal Hotspot
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
+        <div class="righticon fit inline">
+          <img
+            src="./icons/Untitled Background Removed.png"
+            alt=""
+            class="righticon"
+          />
         </div>
-        <div class="whitebox cursor padding">
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/notifications Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Notifications
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/sound Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Sound & Haptics
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/focus Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Focus
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/time Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Screen Time
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-
+      </div>
+      <div class="whitebox flex cursor padding">
+        <div class="contents flex">
+          <div class="userimage fit inline">
+            <img src="./icons/airpods.svg" alt="" class="lefticon" />
+          </div>
+          <div class="contents inline">
+            <p class="generalheading fit">Rohit's Airpods Pro</p>
+          </div>
         </div>
-        <div class="whitebox cursor padding">
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/general.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            General
-                        </p>
-                    </div>
-                </div>
 
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/control Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Control Center
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/display Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Display & Brightness
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/home.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Home
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/accessibility.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Accessibility
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/wallpaper.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Wallpaper
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/siri.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Siri & Search
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/faceid Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Face ID & Passcode
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/emergency Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Emergency SOS
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/exposure.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Exposure Notifications
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/battery Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Battery
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
-            <hr>
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/privacy Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Privacy & Security
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
-            </div>
+        <div class="righticon fit inline">
+          <img
+            src="./icons/Untitled Background Removed.png"
+            alt=""
+            class="righticon"
+          />
         </div>
-        <div class="whitebox cursor padding">
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/focus Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            Dark Mode
-                        </p>
-                    </div>
-                </div>
+      </div>
 
-                <div class="switch fit inline">
-                    <div class="outerradius1  inline">
-                        <div class="innercircle1" onclick="changeColor2()"></div>
-                    </div>
-                </div>
+      <div class="whitebox cursor padding">
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/aeroplane.png" alt="" class="generalicon" />
             </div>
-
-            <hr>
-
-            <div class="innerdivision flex">
-                <div class="contents flex">
-                    <div class="userimage fit inline">
-                        <img src="./icons/appstore Background Removed.png" alt="" class="generalicon">
-                    </div>
-                    <div class="contents inline">
-                        <p class="generalheading imagewithheading fit">
-                            App Store
-                        </p>
-                    </div>
-                </div>
-
-                <div class="righticon fit inline">
-                    <img src="./icons/Untitled Background Removed.png" alt="" class="righticon">
-                </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Airplane Mode</p>
             </div>
+          </div>
 
+          <div class="switch fit inline">
+            <div class="outerradius inline">
+              <div class="innercircle" onclick="changeColor()"></div>
+            </div>
+          </div>
         </div>
+
+        <hr />
+
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/wifi.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Wi-Fi</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/bluetooth.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Bluetooth</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/data.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Mobile Data</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/hotspot.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">
+                Personal Hotspot
+              </p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="whitebox cursor padding">
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img
+                src="./icons/notifications Background Removed.png"
+                alt=""
+                class="generalicon"
+              />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Notifications</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/sound.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Sound & Haptics</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/focus.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Focus</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img
+                src="./icons/time Background Removed.png"
+                alt=""
+                class="generalicon"
+              />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Screen Time</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="whitebox cursor padding">
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/general.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">General</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/control.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Control Center</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/display.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">
+                Display & Brightness
+              </p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/home.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Home</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/accessibility.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Accessibility</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/wallpaper.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Wallpaper</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/siri.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Siri & Search</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/faceid.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">
+                Face ID & Passcode
+              </p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/sos.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Emergency SOS</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/exposure.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">
+                Exposure Notifications
+              </p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img
+                src="./icons/battery Background Removed.png"
+                alt=""
+                class="generalicon"
+              />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Battery</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/privacy.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">
+                Privacy & Security
+              </p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="whitebox cursor padding">
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/focus.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">Dark Mode</p>
+            </div>
+          </div>
+
+          <div class="switch fit inline">
+            <div class="outerradius1 inline">
+              <div class="innercircle1" onclick="changeColor2()"></div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="innerdivision flex">
+          <div class="contents flex">
+            <div class="userimage fit inline">
+              <img src="./icons/appstore.png" alt="" class="generalicon" />
+            </div>
+            <div class="contents inline">
+              <p class="generalheading imagewithheading fit">App Store</p>
+            </div>
+          </div>
+
+          <div class="righticon fit inline">
+            <img
+              src="./icons/Untitled Background Removed.png"
+              alt=""
+              class="righticon"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-</body>
-
-
+  </body>
 </html>
