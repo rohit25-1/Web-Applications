@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "SF-PRO", sans-serif;
+  font-family: "SF-PRO", "Raleway", sans-serif;
 
   box-sizing: border-box;
 }
@@ -44,21 +44,21 @@ nav {
   position: sticky;
   height: 5rem;
   top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   visibility: hidden;
-  position: -webkit-sticky
-  
+  position: -webkit-sticky;
 }
 
 .navbar {
   width: 23.5rem;
   position: relative;
   right: 16px;
-
+  border-radius: 50px 50px 0px 0px;
   box-sizing: content-box;
   background-color: rgba(255, 255, 255, 0.439);
   height: 5rem;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(16.4px);
 }
 
 .navtitle {
@@ -80,6 +80,7 @@ nav {
   padding-right: 14px;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -88,7 +89,7 @@ nav {
 
 .heading {
   color: rgb(27, 27, 27);
-  font-family: "SF-PRO", sans-serif;
+  font-family: "SF-PRO", "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 701;
   letter-spacing: 1px;
@@ -273,6 +274,18 @@ hr {
   width: 83%;
   margin-left: auto;
   margin-top: 1px;
+}
+
+.lowerbar {
+  height: 8px;
+  width: 10rem;
+  border-radius: 20px;
+  position: sticky;
+  bottom: 2px;
+  background-color: rgba(68, 68, 68, 0.45);
+  backdrop-filter: blur(20px);
+  margin: auto;
+  margin-bottom: 1.3px;
 }
 
 @keyframes fadeIn {

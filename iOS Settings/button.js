@@ -60,6 +60,8 @@ function darkmode() {
   whitebox = document.getElementsByClassName("whitebox");
   heading = document.getElementsByClassName("heading")[0];
   nav = document.querySelector(".navbar");
+  lower = document.querySelector(".lowerbar");
+  lower.style.background = "rgb(209 193 193 / 45%)";
   inp = document.querySelector(".inpsearch");
   airpods = document.getElementsByClassName("lefticon")[0];
   airpods.src = "./icons/airpods-dark.svg";
@@ -95,6 +97,8 @@ function lightmode() {
   airpods = document.getElementsByClassName("lefticon")[0];
   airpods.src = "./icons/airpods.svg";
   searchbox.style.background = "rgb(227, 226, 232)";
+  lower = document.querySelector(".lowerbar");
+  lower.style.background = "rgba(68, 68, 68, 0.45)";
   for (let i = 0; i < whitebox.length; i++)
     whitebox[i].style.background = "rgb(255, 255, 255)";
 }
