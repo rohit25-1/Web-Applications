@@ -33,14 +33,16 @@ nav {
 
 .right {
   float: right;
-  margin-right: 20px;
-}
+  }
 
 .dots {
-  width: 21px;
-  height: 18px;
+  width: 36px;
+  height: 33px;
   border-radius: 5px;
   padding: 6px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .dots:hover {
@@ -164,8 +166,6 @@ footer {
   width: 100%;
   background-color: rgb(245, 245, 247);
   height: 4rem;
-  font-family: "Inter", sans-serif;
-  letter-spacing: 1px;
   font-size: 11px;
   position: relative;
   left: 0;

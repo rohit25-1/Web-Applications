@@ -61,12 +61,12 @@ function darkmode() {
   heading = document.getElementsByClassName("heading")[0];
   nav = document.querySelector(".navbar");
   lower = document.querySelector(".lowerbar");
-  lower.style.background = "rgb(209 193 193 / 45%)";
   inp = document.querySelector(".inpsearch");
-  airpods = document.getElementsByClassName("lefticon")[0];
-  airpods.src = "./icons/airpods-dark.svg";
   outerradius = document.querySelector(".outerradius");
   searchbox = document.querySelector(".searchbox");
+  airpods = document.getElementsByClassName("lefticon")[0];
+  lower.style.background = "rgb(209 193 193 / 45%)";
+  airpods.src = "./icons/airpods-dark.svg";
   inp.style.background = "rgb(28,28,30)";
   outerradius.style.background = "rgb(57,56,61)";
   outerradius.style.border = " 1px solid rgb(57,56,61)";
@@ -75,9 +75,15 @@ function darkmode() {
   nav.style.background = "rgb(36 36 36 / 44%)";
   heading.style.color = "white";
   container.style.background = "black";
+  container.style.transition = "background-color 300ms";
+
+  heading.style.transition = "color 300ms";
+  outerradius.style.transition = "background-color 300ms";
   body.style.color = "white";
-  for (let i = 0; i < whitebox.length; i++)
+  for (let i = 0; i < whitebox.length; i++) {
     whitebox[i].style.background = "rgb(28,28,30)";
+    whitebox[i].style.transition = "background-color 300ms";
+  }
 }
 
 function lightmode() {
